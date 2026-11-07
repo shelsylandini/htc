@@ -1,0 +1,5 @@
+patients = 4000
+epochs_per_patient = 12
+incident_fraction = 0.4
+womac_baseline = 48.0
+seed = 0

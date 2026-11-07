@@ -1,0 +1,5 @@
+extends = "main"
+name = "ablation_no_decay"
+
+[train]
+decay_window = 1

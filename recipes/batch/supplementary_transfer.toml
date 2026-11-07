@@ -1,0 +1,6 @@
+extends = "main"
+name = "supplementary_transfer"
+
+[data]
+incident_fraction = 0.5
+seed = 7

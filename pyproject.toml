@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "htc_twin"
+version = "0.1.0"
+description = "Hazard-targeted closed-loop digital twin coupling a gut-joint mechanistic model, offline reinforcement learning, and a near-term quantum prescription optimizer for adaptive exercise therapy in knee osteoarthritis"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["digital-twin", "offline-reinforcement-learning", "osteoarthritis", "qaoa", "off-policy-evaluation"]
+
+dependencies = [
+    "torch>=2.1",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "simple-parsing>=0.1.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.4",
+    "black>=24.0",
+    "isort>=5.12",
+    "mypy>=1.8",
+    "pre-commit>=3.5",
+]
+
+[project.scripts]
+closedloop-oa = "htc_twin.bottling.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["htc_twin*"]
+exclude = ["qc*", "recipes*", "procedures*", "assets*", "docs*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["htc_twin"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["B008"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["htc_twin"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["htc_twin"]
+warn_unused_ignores = false
+warn_return_any = false
+disallow_untyped_calls = false
+
+[[tool.mypy.overrides]]
+module = ["scipy.*", "sklearn.*", "simple_parsing.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["qc"]
+addopts = "-q"

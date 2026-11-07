@@ -1,0 +1,8 @@
+depth = 3
+grid = 11
+penalty = 4.0
+opt_steps = 80
+opt_lr = 0.1
+restarts = 4
+shots = 256
+seed = 0

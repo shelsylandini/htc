@@ -1,0 +1,75 @@
+name = "main"
+
+[model]
+dim_act = 8
+dim_clin = 6
+dim_str = 3
+hidden = 128
+dt_layers = 2
+dt_heads = 4
+context = 20
+ordinal_grades = 5
+residual_hidden = 32
+
+[model.action]
+modalities = 3
+intensities = 2
+frequencies = 2
+load_gain = 1.6
+
+[model.twin]
+k1 = 0.85
+k2 = 0.65
+k3 = 0.55
+k4 = 0.70
+k5 = 0.30
+k6 = 0.50
+k7 = 0.22
+c_max = 1.0
+s0 = 1.0
+u_opt = 0.85
+dt = 0.25
+substeps = 4
+
+[data]
+patients = 4000
+epochs_per_patient = 12
+incident_fraction = 0.4
+womac_baseline = 48.0
+seed = 0
+
+[train]
+batch_size = 64
+grad_accum = 4
+epochs = 4000
+lr = 0.0003
+warmup = 200
+weight_decay = 0.0001
+gamma = 0.95
+cql_alpha = 1.0
+target_tau = 0.005
+mcid = 12.0
+lambda_s = 0.5
+lambda_a = 0.1
+decay_window = 6
+target_return = 1.0
+grad_clip = 1.0
+amp = false
+seed = 0
+
+[quantum]
+depth = 3
+grid = 11
+penalty = 4.0
+opt_steps = 80
+opt_lr = 0.1
+restarts = 4
+shots = 256
+seed = 0
+
+[evaluation]
+bootstrap = 1000
+null_threshold = 1.0
+auc_tolerance = 1.5
+seeds = 10
+seed = 0

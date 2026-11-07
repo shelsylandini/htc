@@ -1,0 +1,29 @@
+dim_act = 8
+dim_clin = 6
+dim_str = 3
+hidden = 128
+dt_layers = 2
+dt_heads = 4
+context = 20
+ordinal_grades = 5
+residual_hidden = 32
+
+[action]
+modalities = 3
+intensities = 2
+frequencies = 2
+load_gain = 1.6
+
+[twin]
+k1 = 0.85
+k2 = 0.65
+k3 = 0.55
+k4 = 0.70
+k5 = 0.30
+k6 = 0.50
+k7 = 0.22
+c_max = 1.0
+s0 = 1.0
+u_opt = 0.85
+dt = 0.25
+substeps = 4

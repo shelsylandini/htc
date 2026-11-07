@@ -1,0 +1,5 @@
+extends = "main"
+name = "ablation_qaoa_depth1"
+
+[quantum]
+depth = 1

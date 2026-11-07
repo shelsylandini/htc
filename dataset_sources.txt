@@ -1,0 +1,23 @@
+Osteoarthritis Initiative
+Access: https://nda.nih.gov/oai/
+Role: OAI radiographic longitudinal knee osteoarthritis records for structural state and held-out evaluation.
+License/access terms: Public de-identified study data through NDA data access controls.
+Verification: official NDA OAI landing page opened successfully.
+
+Multicenter Osteoarthritis Study
+Access: https://most.ucsf.edu/
+Role: External WOMAC and osteoarthritis progression cohort.
+License/access terms: Public study resource with governed data release.
+Verification: official MOST landing page opened successfully.
+
+UK Biobank
+Access: https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/
+Role: Wrist accelerometer transfer signals and diagnosis-code osteoarthritis sensitivity evaluation.
+License/access terms: Restricted bona fide researcher application.
+Verification: official UK Biobank access page opened successfully.
+
+NCBI BioProject PRJNA203810
+Access: https://www.ncbi.nlm.nih.gov/bioproject/PRJNA203810
+Role: Published gut microbiome association anchor for projected gut-joint ODE parameter ranges.
+License/access terms: Public NCBI BioProject metadata and linked records.
+Verification: official NCBI BioProject page opened successfully.
